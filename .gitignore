@@ -1,0 +1,12 @@
+*backup*
+saved/
+wandb/
+plots/
+*pycache*
+*ipynb_checkpoints*
+*.tar*
+*dataset*
+*.swp
+*.h5
+*.pkl
+*temp*
