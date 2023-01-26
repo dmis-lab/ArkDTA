@@ -16,8 +16,8 @@ Protein-ligand binding affinity prediction is a central task in drug design and 
 
 - Python 3.7.9
 - CUDA: 11.X
-- Download and extract data.tar.gz (*link will be posted*), ????GB) at current directory. These files are the preprocessed datasets PDBBind (ver.2020), Davis and Metz.
-- Download and extract saved.tar.gz (*link will be posted*), ????MB) at directory **./saved**. These files are the model checkpoints for each fold of the PDBbind datset.
+- Download and extract data.tar.gz ([link](https://drive.google.com/file/d/1hmR5w47VUk6RW0br8BanJT94R2FPHgDL/view?usp=share_link)), 45MB) at current directory. These files are the preprocessed datasets PDBBind (ver.2020), Davis and Metz.
+- Download and extract saved.tar.gz ([link](https://drive.google.com/file/d/1iVttdzlAMXYeJ11JKVe19Dkvgpb8PZSS/view?usp=share_link)), 170MB) at directory **./saved**. These files are the model checkpoints for each fold of the PDBbind datset.
 
 ## Installing the Python (3.8.12) Conda Environment
 
