@@ -1,0 +1,24 @@
+# YAML 
+---
+  dataset_version: 221027
+  dataset_subsets: pdb_2020_general # bddb, davis, metz etc.
+  dataset_partition: random         # randomsingle
+  dataset_loading: preload          # autoload # preload
+  ba_measure: KIKD                  # KIKD # IC50 # Binary
+
+  pred_model: arkdta 
+
+  hp_num_epochs: 100
+  hp_batch_size: 64
+  hp_learning_rate: 0.00005        # 0.0001 for IC50
+  hp_weight_decay: 0.0
+  hp_early_patience: 30
+  hp_aux_coefficient:  5.0 
+  hp_main_coefficient: 1.0 
+  arkdta_posweighted: 10.0
+
+  arkdta_hidden_dim: 320 
+  arkdta_esm_model: esm2_t6_8M_UR50D 
+  arkdta_complex_decoder: PMA.Residue
+  arkdta_esm_freeze: False 
+  arkdta_attention_option: additive
