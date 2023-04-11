@@ -29,8 +29,8 @@ class Net(nn.Module):
         self.layer['comp_encoder'] = EcfpConverter(h, L, E, analysis_mode)
         self.layer['intg_arkmab']  = load_residue_addon(args)
         self.layer['intg_pooling'] = load_complex_decoder(args)
-        self.layer['ba_predictor'] = AffinityMLP(h, d)
-        self.layer['dt_predictor'] = InteractionMLP(h, d)
+        self.layer['ba_predictor'] = AffinityMLP(h)
+        self.layer['dt_predictor'] = InteractionMLP(h)
 
     def set_default_hp(self, trainer):
 
