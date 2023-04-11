@@ -26,7 +26,7 @@ class Net(nn.Module):
         assert 'ARKMAB' in args.arkdta_residue_addon 
 
         self.layer['prot_encoder'] = FastaESM(h, esm, esm_freeze, analysis_mode)
-        self.layer['comp_encoder'] = EcfpConverter(h, d, L, K, A, E, analysis_mode)
+        self.layer['comp_encoder'] = EcfpConverter(h, L, E, analysis_mode)
         self.layer['intg_arkmab']  = load_residue_addon(args)
         self.layer['intg_pooling'] = load_complex_decoder(args)
         self.layer['ba_predictor'] = AffinityMLP(h, d)
