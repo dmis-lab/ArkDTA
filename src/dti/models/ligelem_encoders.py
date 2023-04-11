@@ -28,7 +28,7 @@ class LigelemEncoder(nn.Module):
         self.representations = []
 
 
-class EcfpConverter(AtomEncoder):
+class EcfpConverter(LigelemEncoder):
     def __init__(self, h: int, sab_depth: int, ecfp_dim: int, analysis_mode: bool):
         super(EcfpConverter, self).__init__()
         K = 4 # number of attention heads

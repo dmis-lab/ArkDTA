@@ -7,18 +7,18 @@ from .set_transformer import *
 torch.autograd.set_detect_anomaly(True)
 
 def load_residue_encoder(args):
-    h = args.deepcbal_hidden_dim 
+    h = args.arkdta_hidden_dim 
     d - args.hp_dropout_rate
-    C = args.deepcbal_cnn_depth
-    K = args.deepcbal_kernel_size
-    esm_model = args.deepcbal_esm_model
-    esm_freeze = args.deepcbal_esm_freeze
+    C = args.arkdta_cnn_depth
+    K = args.arkdta_kernel_size
+    esm_model = args.arkdta_esm_model
+    esm_freeze = args.arkdta_esm_freeze
 
     analysis_mode = args.analysis_mode
 
-    if args.deepcbal_residue_encoder == 'AminoAcidSeq.CNN':
+    if args.arkdta_residue_encoder == 'AminoAcidSeq.CNN':
         return AminoAcidSeqCNN(h, d, C, K, analysis_mode)
-    elif args.deepcbal_residue_encoder == 'Fasta.ESM':
+    elif args.arkdta_residue_encoder == 'Fasta.ESM':
         return FastaESM(h, esm_model, esm_freeze, analysis_mode)
     else:
         raise
